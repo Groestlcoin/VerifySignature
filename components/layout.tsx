@@ -3,8 +3,8 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Verify bitcoin address signature online';
-export const siteTitle = 'Verify bitcoin address signature online';
+const name = 'Verify groestlcoin address signature online';
+export const siteTitle = 'Verify groestlcoin address signature online';
 
 export default function Layout({
   children,
@@ -53,7 +53,7 @@ export default function Layout({
 
         <footer className="footer mt-auto py-3 bg-light">
             <div className="container">
-                <span className="text-muted">This page works offline. <a href={'https://github.com/BlueWallet/VerifySignature'} target={'_blank'}>Fork me on Github!</a></span> <br/>
+                <span className="text-muted">This page works offline. <a href={'https://github.com/Groestlcoin/VerifySignature'} target={'_blank'}>Fork me on Github!</a></span> <br/>
             </div>
         </footer>
     </div>

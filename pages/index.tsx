@@ -4,14 +4,14 @@ import utilStyles from '../styles/utils.module.css';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import bitcoinMessage from 'bitcoinjs-message';
+import bitcoinMessage from 'groestlcoinjs-message';
 
 const addressBalanceFetcher = async (address: string) => {
   if (!address) {
     return {};
   }
 
-  const res = await fetch(`https://blockstream.info/api/address/${address}`);
+  const res = await fetch(`https://esplora.groestlcoin.org/api/address/${address}`);
   return await res.json();
 };
 
@@ -112,7 +112,7 @@ export default function Home() {
           <br/>
 
           {data?.chain_stats && (
-                  <span>address has <i>{(data?.chain_stats?.funded_txo_sum - data?.chain_stats?.spent_txo_sum) / 100000000} BTC</i></span>
+                  <span>address has <i>{(data?.chain_stats?.funded_txo_sum - data?.chain_stats?.spent_txo_sum) / 100000000} GRS</i></span>
           )}
 
           <br/>
